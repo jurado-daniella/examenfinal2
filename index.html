@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institucion Jurado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Institucion Jurado</h1>
+    </header>
+    <main>
+
+        <section id="login">
+            <h2>Inicio de Sesión</h2>
+            <form id="loginForm">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Ingresar</button>
+            </form>
+            <p id="loginError" class="error"></p>
+        </section>
+
+
+        <section id="course-selection" class="hidden">
+            <h2>Selecciona el Curso</h2>
+            <form id="courseForm">
+                <label for="course">Elige un curso:</label>
+                <select id="course" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="matematica">Matemáticas</option>
+                    <option value="fisica">Física</option>
+                    <option value="historia">Historia</option>
+                    <option value="programacion">Programación</option>
+                    <option value="calculo">Cálculo</option>
+                </select>
+                <button type="submit">Continuar</button>
+            </form>
+        </section>
+
+
+        <section id="course-info" class="hidden">
+            <h2 id="course-title"></h2>
+            <div id="course-details"></div>
+            <button id="goHome">Volver al Inicio</button>
+            <button id="startQuiz">Iniciar Evaluación</button>
+        </section>
+
+
+        <section id="quiz" class="hidden">
+            <h2>Evaluación</h2>
+            <form id="quizForm">
+                <div id="quiz-questions"></div>
+                <button type="submit">Enviar Respuestas</button>
+            </form>
+            <p id="quizResult"></p>
+            <button id="goHome">Volver al Inicio</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
